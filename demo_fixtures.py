@@ -39,8 +39,8 @@ KRISHICO_BASE = [
             "team. We'd hire or partner for that."),
     ("Q16", "Funded from the business. Our finance head has allocated the budget and I "
             "can share the approval note."),
-    ("Q17", "A working forecast that depot managers actually trust and use every week."),
-    ("Q18", "A mid-size project, and we'd want it live before the next sowing season."),
+    ("Q17", "A great outcome for us is a working demand forecast that our depot managers actually trust and use every week, cutting stockouts and write-offs measurably within two quarters. Success means depot managers stop ordering on instinct."),
+    ("Q18", "Our budget range is roughly 25 to 40 lakh for the first phase. Our finance head signed the approval note and I can share it with you. The hard deadline is the next sowing season in April, so we need it live before then."),
 ]
 
 Q13_ASPIRATIONAL = (
