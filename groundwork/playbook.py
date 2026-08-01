@@ -70,8 +70,13 @@ ITEMS = [
     Item("Q16", "D. Stage and plans", "How is this funded \u2014 bootstrapped or raising? What is committed versus in conversation?",
          load_bearing=True, topic="funding"),
 
-    Item("Q17", "E. Working with AtliQ", "What would a great outcome from an engagement with AtliQ look like?",
-         load_bearing=True),
+    # Q17 is deliberately NOT load-bearing. It asks what a founder hopes for,
+    # which is an intention rather than a fact. The other five gates - target
+    # customer, stage, systems and data, funding, budget - are all matters of
+    # fact that can be evidenced. Gating a scope-ready decision on how crisply
+    # someone articulates their hopes is a weaker rule than the rest, so it is
+    # tracked for coverage but does not block.
+    Item("Q17", "E. Working with AtliQ", "What would a great outcome from an engagement with AtliQ look like?"),
     Item("Q18", "E. Working with AtliQ", "What budget range are you working with, and are there hard deadlines?",
          load_bearing=True),
 ]

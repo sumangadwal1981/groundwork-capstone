@@ -107,12 +107,20 @@ def update_coverage(session, item_id, raw_text, claims):
     item = playbook.BY_ID.get(item_id)
     escalated_open = any(c.escalated and not (c.artifact or c.named_owner) for c in claims)
 
-    if words < 8 or not claims:
+    if words < 8:
+        # Barely an answer at all.
         state = PARTIAL if words else NOT_DISCUSSED
+    elif not claims:
+        # A real answer that produced no gradeable claim. This is normal for
+        # items that ask about intent rather than fact - "what would a great
+        # outcome look like", "what is your launch plan". The founder answered;
+        # there is simply nothing here to grade. Treat it as covered, or the
+        # brief reports items as never discussed when they plainly were.
+        state = COVERED
     elif escalated_open and item and item.load_bearing:
         # The founder answered, but a load-bearing claim is still unevidenced.
-        # Covered as a conversation, not as evidence: the readiness check below
-        # is what stops this reaching scope-ready.
+        # Covered as a conversation, not as evidence: the readiness check is
+        # what stops this reaching scope-ready.
         state = COVERED
     else:
         state = COVERED
