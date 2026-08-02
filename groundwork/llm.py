@@ -107,6 +107,27 @@ For each claim assign:
          - assumed (they believe it, no evidence offered)
          - unverified (vague, second-hand, or contradicts something earlier)
 
+TOPIC DEFINITIONS. Be strict. A topic tag means the claim will be held until the
+founder supplies an artifact or names an owner, so only tag what genuinely needs
+verifying before scoping.
+
+  systems_data - a system or dataset that exists NOW and would be used in the
+                 engagement: what it holds, where it lives, its granularity, who
+                 owns it, whether it can be accessed.
+  traction     - current revenue, users, pilots, retention, letters of intent.
+                 Numbers about the business as it stands today.
+  team         - who works there NOW and in what role, or roles they intend to
+                 hire. NOT the founder's biography, family, upbringing or career
+                 history. "My father ran two depots" is background, not team.
+                 "We have twelve depot managers and no data team" is team.
+  funding      - money committed versus in conversation, budget approved,
+                 runway. Present-tense financial position.
+  regulatory   - licences held or required, compliance obligations that would
+                 shape the engagement.
+  null         - everything else. Background, motivation, market opinion,
+                 history, and anything that does not need verifying before a
+                 proposal can be scoped. Most claims are null. Use it freely.
+
 Grade on evidence only. Never grade on who the founder is, how impressive they
 sound, or how confident they seem. If uncertain, grade DOWN to unverified.
 Never grade a claim as false; only as un-evidenced.
@@ -131,8 +152,11 @@ _TOPIC_CUES = {
                      "crm", "records", "history", "warehouse", "sql", "access"],
     "traction": ["revenue", "users", "customers", "pilot", "retention", "paying",
                  "signed", "loi", "waitlist", "traction", "mrr", "arr"],
-    "team": ["co-founder", "cofounder", "team", "hire", "engineer", "designer",
-             "developer", "part-time", "friend"],
+    # Present-tense team composition only. Biography words like "father",
+    # "grew up" or "worked at" are deliberately absent: a founder's history is
+    # background, not something to verify before scoping.
+    "team": ["co-founder", "cofounder", "hire", "hiring", "engineer", "designer",
+             "developer", "part-time", "headcount", "no technical"],
     "funding": ["raising", "funded", "bootstrapped", "investor", "committed",
                 "seed", "angel", "runway", "budget"],
     "regulatory": ["licence", "license", "kyc", "regulat", "compliance", "rbi",
